@@ -1,4 +1,3 @@
-
 package retroalimentacion.parcial1;
 
 /**
@@ -70,5 +69,18 @@ public class Empleado {
         String descan = this.tomarDescanso(horas);
         return traba + descan;
     }
+    public double calcularBono(float porcentaje){
+        return salarioBase * porcentaje;
+    }
+    public double calculaSalarioTotal1(double bono, int diasTrabajados){
+        double salarioPorDia = this.salarioBase/30;
+        double salarioTrabajado = salarioPorDia * diasTrabajados;
+        return salarioTrabajado + this.calcularBono(diasTrabajados);
+          
+    }
+    } 
+
+ 
+
     
-    }  
+  
